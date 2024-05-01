@@ -12,10 +12,19 @@ class MeuComponente extends React.Component{
         alert("olá " + nome)
          console.log(this);
     }
+
+    minhaArrowFunction = (curso) =>{
+        alert("Estou fazendo o curso de " + curso )
+        console.log(this)
+    }
     // Render
     render(){
-        return <button onClick={this.mensagem.bind(this,"Ralf")}> Clique aqui</button>
-       
+        return(
+            <div>
+         <button onClick={this.mensagem.bind(this,"Ralf")}> Clique aqui</button>
+         <button onClick={() => this.minhaArrowFunction('ReactJS')}>Arrow Function</button>
+            </div>
+        )
     }
 }
    
